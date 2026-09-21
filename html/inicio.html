@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Sistema de Asistencias</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex h-screen overflow-hidden">
+    <!-- Menú Lateral -->
+    <aside class="w-64 bg-white shadow-md hidden md:flex flex-col">
+        <div class="p-6 text-center border-b">
+            <h2 class="text-xl font-bold text-blue-600">Mi Empresa</h2>
+        </div>
+        <nav class="flex-1 p-4 space-y-2">
+            <a href="inicio.html" class="sidebar-link active">Inicio</a>
+            <a href="asistencias.html" class="sidebar-link">Asistencias</a>
+            <a href="tareas.html" class="sidebar-link">Tareas</a>
+        </nav>
+        <div class="p-4 border-t">
+            <button id="logoutBtn" class="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg">Cerrar Sesión</button>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 overflow-y-auto p-8">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Panel de Control</h1>
+            <div class="text-sm text-gray-500">Bienvenido, <span id="userNameDisplay" class="font-semibold text-gray-800">Usuario</span></div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+                <h3 class="text-lg font-semibold mb-2">Asistencias Hoy</h3>
+                <p class="text-3xl font-bold text-gray-700">12 / 15</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+                <h3 class="text-lg font-semibold mb-2">Tareas Completadas</h3>
+                <p class="text-3xl font-bold text-gray-700">8</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/inicio.js"></script>
+</body>
+</html>

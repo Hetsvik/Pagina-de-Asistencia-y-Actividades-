@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencias - Sistema</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex h-screen overflow-hidden">
+    <!-- Menú Lateral -->
+    <aside class="w-64 bg-white shadow-md hidden md:flex flex-col">
+        <div class="p-6 text-center border-b">
+            <h2 class="text-xl font-bold text-blue-600">Mi Empresa</h2>
+        </div>
+        <nav class="flex-1 p-4 space-y-2">
+            <a href="inicio.html" class="sidebar-link">Inicio</a>
+            <a href="asistencias.html" class="sidebar-link active">Asistencias</a>
+            <a href="tareas.html" class="sidebar-link">Tareas</a>
+        </nav>
+        <div class="p-4 border-t">
+            <button id="logoutBtn" class="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg">Cerrar Sesión</button>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 overflow-y-auto p-8">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Control de Asistencias</h1>
+        </header>
+
+        <!-- Botones de Acción -->
+        <div class="bg-white p-6 rounded-lg shadow-sm mb-6 flex gap-4">
+            <button id="btnEntrada" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition font-semibold">
+                Marcar Entrada
+            </button>
+            <button id="btnSalida" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition font-semibold">
+                Marcar Salida
+            </button>
+        </div>
+
+        <!-- Tabla de Historial -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <table class="min-w-full">
+                <thead class="bg-gray-50 border-b">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hora</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAsistencias" class="divide-y divide-gray-200">
+                    <!-- Los registros se inyectarán aquí mediante JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Importamos el JS global (para el menú/logout) y el específico de esta vista -->
+    <script src="../js/inicio.js"></script>
+    <script src="../js/asistencias.js"></script>
+</body>
+</html>

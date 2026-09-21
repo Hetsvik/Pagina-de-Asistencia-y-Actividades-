@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas - Sistema</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex h-screen overflow-hidden">
+    <!-- Menú Lateral -->
+    <aside class="w-64 bg-white shadow-md hidden md:flex flex-col">
+        <div class="p-6 text-center border-b">
+            <h2 class="text-xl font-bold text-blue-600">Mi Empresa</h2>
+        </div>
+        <nav class="flex-1 p-4 space-y-2">
+            <a href="inicio.html" class="sidebar-link">Inicio</a>
+            <a href="asistencias.html" class="sidebar-link">Asistencias</a>
+            <a href="tareas.html" class="sidebar-link active">Tareas</a>
+        </nav>
+        <div class="p-4 border-t">
+            <button id="logoutBtn" class="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg">Cerrar Sesión</button>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="flex-1 overflow-y-auto p-8">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Gestión de Tareas</h1>
+        </header>
+
+        <!-- Formulario nueva tarea -->
+        <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+            <form id="formTarea" class="flex gap-4">
+                <input type="text" id="inputTarea" placeholder="Descripción de la nueva tarea..." class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
+                    Agregar Tarea
+                </button>
+            </form>
+        </div>
+
+        <!-- Lista de tareas -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700">Tus Tareas</h3>
+            <ul id="listaTareas" class="space-y-3">
+                <!-- Las tareas se inyectarán aquí -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="../js/inicio.js"></script>
+    <script src="../js/tareas.js"></script>
+</body>
+</html>
